@@ -1,0 +1,16 @@
+
+/* Para los elementos en el cuadro de edicion */
+.text-input{
+    -fx-text-fill: #FFFFFF;
+    -fx-prompt-text-fill: #757575;
+}
+
+.text-input:disabled{
+    -fx-opacity: 1.0;
+    -fx-text-fill: #FFFFFF;
+    -fx-prompt-text-fill: transparent;
+}
+
+.text-input > .scroll-pane:disabled{
+    -fx-opacity: 1.0;
+}

@@ -1,0 +1,27 @@
+
+/* Para los combo box */
+.combo-box .cell{
+    -fx-text-fill: #FFFFFF;
+    -fx-selection-bar: #263238;
+    -fx-font-size: 14;
+}
+
+.combo-box-popup .list-view .list-cell{
+    -fx-background-color: #263238;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover{
+    -fx-background-color: #FB8C00;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected{
+    -fx-background-color: #757575;
+    -fx-font-weight: bold;
+}
+
+.combo-box:disabled{
+    -fx-opacity: 1.0;
+    -fx-text-fill: #FFFFFF;
+}

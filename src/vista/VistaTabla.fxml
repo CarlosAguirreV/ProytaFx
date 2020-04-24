@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorVistaTabla">
+    <top>
+        <GridPane prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #263238;" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <children>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <JFXButton fx:id="btnBuscar" layoutX="41.0" layoutY="12.0" onMouseClicked="#clickBuscar" stylesheets="@../css/estiloBotones.css" text="Buscar" textFill="#fb8c00" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                </AnchorPane>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                    <children>
+                        <JFXButton fx:id="btnNuevo" layoutX="41.0" layoutY="12.0" onMouseClicked="#clickNuevo" stylesheets="@../css/estiloBotones.css" text="Nuevo proyecto" textFill="#fb8c00" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                </AnchorPane>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                    <children>
+                        <JFXButton fx:id="btnEditar" layoutX="41.0" layoutY="12.0" onMouseClicked="#clickEditar" stylesheets="@../css/estiloBotones.css" text="Ver / Editar" textFill="#fb8c00" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                </AnchorPane>
+            </children>
+        </GridPane>
+    </top>
+    <center>
+        <TableView fx:id="tblProyectos" onMouseClicked="#clickTabla" prefHeight="113.0" prefWidth="1000.0" stylesheets="@../css/estiloTabla.css" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="colTitulo" prefWidth="599.0" text="Título" />
+                <TableColumn fx:id="colEstado" minWidth="0.0" prefWidth="210.0" text="Estado" />
+                <TableColumn fx:id="colPrioridad" prefWidth="190.0" text="Prioridad" />
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <GridPane prefHeight="50.0" prefWidth="1000.0" style="-fx-background-color: #263238;" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="495.0" minWidth="10.0" prefWidth="93.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="907.0" minWidth="10.0" prefWidth="907.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <AnchorPane maxWidth="-Infinity" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Label alignment="CENTER" layoutX="14.0" layoutY="6.0" text="Ver" textFill="#fb8c00" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane maxWidth="1.7976931348623157E308" prefHeight="200.0" GridPane.columnIndex="1">
+                    <children>
+                        <JFXComboBox fx:id="cmbFiltro" focusColor="#fb8c00" layoutX="57.0" layoutY="13.0" onAction="#clickCmbFiltro" stylesheets="@../css/estiloComboBox.css" unFocusColor="#5e5e5e" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </GridPane>
+    </bottom>
+</BorderPane>

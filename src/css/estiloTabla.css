@@ -1,0 +1,40 @@
+
+/* Para la tabla */
+.table-view{
+    -fx-background-color: #616161;
+    -fx-base: #263238;
+}
+
+/* Para la cabecera de la tabla */
+
+
+.table-view .column-header .label{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+}
+
+/* Para las celdas */
+
+.table-view .table-cell{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14;
+}
+
+.table-row-cell:odd{
+    -fx-background-color: #30373B;
+}
+
+.table-row-cell:even{
+    -fx-background-color: #323D43;
+}
+
+.table-view:row-selection .table-row-cell:filled:selected {
+    -fx-background-color: #FB8C00;
+    -fx-font-weight: bold;
+}
+
+.table-view:row-selection .table-row-cell:filled:selected .table-cell{
+    -fx-text-fill: #000000;
+}
+
