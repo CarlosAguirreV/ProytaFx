@@ -6,17 +6,13 @@ public class POJOProyecto {
     public final static int SIN_CREAR = -1;
 
     // Los estados
-    public final static String[] CADENAS_ESTADO = {"En proceso", "Pausado", "Terminado"};
+    public final static String[] CADENAS_ESTADO = {"En proceso", "Pausado", "Terminado", "Idea"};
     public final static String[] CADENAS_PRIORIDAD = {"Baja", "Media", "Alta"};
 
     // Los estados de un proyecto
     public final static int EN_PROCESO = 0;
     public final static int PAUSADOS = 1;
     public final static int TERMINADOS = 2;
-
-    // Para los valores de estado y prioridad
-    private static final int VALOR_MAX = 2;
-    private static final int VALOR_MIN = 0;
 
     // Para poner limites a las cadenas String, ya que SQLite no las pone
     private static final int LIMITE_TITULO = 100;
@@ -93,7 +89,7 @@ public class POJOProyecto {
     }
 
     public void setEstado(int estado) {
-        this.estado = limitarValor(estado);
+        this.estado = limitarValor(estado, CADENAS_ESTADO.length - 1);
     }
 
     public int getPrioridad() {
@@ -101,7 +97,7 @@ public class POJOProyecto {
     }
 
     public void setPrioridad(int prioridad) {
-        this.prioridad = limitarValor(prioridad);
+        this.prioridad = limitarValor(prioridad, CADENAS_PRIORIDAD.length - 1);
     }
 
     public String getFechaInicio() {
@@ -160,8 +156,8 @@ public class POJOProyecto {
         this.mejoras = limitarCadenas(mejoras, LIMITE_MEJORAS);
     }
 
-    private int limitarValor(int valor) {
-        return (valor > VALOR_MAX || valor < VALOR_MIN) ? 0 : valor;
+    private int limitarValor(int valor, int valorMax) {
+        return (valor > valorMax || valor < 0) ? 0 : valor;
     }
 
     public String getCadenaEstado() {

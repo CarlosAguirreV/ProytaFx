@@ -62,8 +62,9 @@ public class ControladorVistaTabla implements Initializable {
 
     private ControlBD bd;
     private ObservableList<POJOProyecto> listaObservable;
-    private String[] cadenasFiltro = {"Todo", "En proceso", "Pausados", "Terminados"};
+    private String[] cadenasFiltro;
 
+//    private String[] cade = POJOProyecto.CADENAS_ESTADO;
     // ############### AL INICIAR LA VENTANA FX ############### 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -83,6 +84,15 @@ public class ControladorVistaTabla implements Initializable {
 
         // Mostrar todos los proyectos en la tabla
         accionMostrarTodo();
+
+        // Rellenar el array de cadenas para el filtro (combo box)
+        cadenasFiltro = new String[POJOProyecto.CADENAS_ESTADO.length + 1];
+        cadenasFiltro[0] = "Todo";
+        
+        for(int i = 0; i < POJOProyecto.CADENAS_ESTADO.length; i++){
+            cadenasFiltro[i + 1] = POJOProyecto.CADENAS_ESTADO[i];
+            System.out.println("" + POJOProyecto.CADENAS_ESTADO[i]);
+        }
 
         // Rellenar el combobox con los datos
         iniciarComboBox();

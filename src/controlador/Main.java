@@ -15,7 +15,7 @@ import javafx.stage.WindowEvent;
  */
 public class Main extends Application {
 
-    public static final String VERSION_APLICACION = "24.04.20";
+    public static final String VERSION_APLICACION = "11.05.20";
 
     @Override
     public void start(Stage escenario) throws Exception {
