@@ -38,6 +38,9 @@ public class Main extends Application {
 
             // Ponerle un icono a la aplicacion
             escenario.getIcons().add(new Image("recursos/logo.png"));
+            
+            // Hacer que la ventana este maximizada por defecto
+            escenario.setMaximized(true);
 
             // Lo que pasara al cerrar la ventana
             escenario.setOnCloseRequest(new EventHandler<WindowEvent>() {
