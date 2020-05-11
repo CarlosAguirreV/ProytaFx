@@ -64,7 +64,6 @@ public class ControladorVistaTabla implements Initializable {
     private ObservableList<POJOProyecto> listaObservable;
     private String[] cadenasFiltro;
 
-//    private String[] cade = POJOProyecto.CADENAS_ESTADO;
     // ############### AL INICIAR LA VENTANA FX ############### 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
