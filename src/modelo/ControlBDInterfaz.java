@@ -1,7 +1,6 @@
 package modelo;
 
 import javafx.collections.ObservableList;
-import modelo.POJOProyecto;
 
 /**
  *

@@ -34,11 +34,14 @@ public class Main extends Application {
             escenario.setScene(escena);
 
             // Poner un titulo a la ventana
-            escenario.setTitle("Control de proyectos (v" + VERSION_APLICACION + ")");
+            escenario.setTitle("Proyta");
 
             // Ponerle un icono a la aplicacion
-            escenario.getIcons().add(new Image("recursos/logo.png"));
-            
+            escenario.getIcons().add(new Image("recursos/icono1.png"));
+            escenario.getIcons().add(new Image("recursos/icono2.png"));
+            escenario.getIcons().add(new Image("recursos/icono3.png"));
+            escenario.getIcons().add(new Image("recursos/icono4.png"));
+
             // Hacer que la ventana este maximizada por defecto
             escenario.setMaximized(true);
 
