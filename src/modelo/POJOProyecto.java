@@ -1,5 +1,10 @@
 package modelo;
 
+/**
+ * Clase POJO que contiene los campos de un proyecto.
+ * 
+ * @author Carlos Aguirre
+ */
 public class POJOProyecto {
 
     // Lo que significa que un id tenga un -1
@@ -37,9 +42,6 @@ public class POJOProyecto {
     private String destino;
     private String problemas;
     private String mejoras;
-
-    private String cadenaEstado;
-    private String cadenaPrioridad;
 
     public POJOProyecto() {
         this.id = -1;

@@ -3,7 +3,8 @@ package modelo;
 import javafx.collections.ObservableList;
 
 /**
- *
+ * Interfaz que con tiene todos los metodos usados por el controlador de la BD.
+ * 
  * @author Carlos Aguirre
  */
 public interface ControlBDInterfaz {

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controlador;
 
 import modelo.ControlBD;
@@ -59,7 +54,9 @@ public class ControladorVistaTabla implements Initializable {
     private TableColumn colEstado;
     @FXML
     private TableColumn colPrioridad;
-
+    @FXML
+    private Label lblFiltro;
+    
     private ControlBD bd;
     private ObservableList<POJOProyecto> listaObservable;
     private String[] cadenasFiltro;
@@ -117,6 +114,7 @@ public class ControladorVistaTabla implements Initializable {
         btnBuscar.setGraphic(new ImageView(new Image("recursos/consultar.png")));
         btnNuevo.setGraphic(new ImageView(new Image("recursos/alta.png")));
         btnEditar.setGraphic(new ImageView(new Image("recursos/modificar.png")));
+        lblFiltro.setGraphic(new ImageView(new Image("recursos/filtro.png")));
     }
 
     public void accionMostrarTodo() {
