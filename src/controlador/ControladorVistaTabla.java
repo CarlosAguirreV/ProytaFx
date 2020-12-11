@@ -56,6 +56,8 @@ public class ControladorVistaTabla implements Initializable {
     private TableColumn colPrioridad;
     @FXML
     private Label lblFiltro;
+    @FXML
+    private JFXButton btnAcerca;
 
     private ControlBD bd;
     private ObservableList<POJOProyecto> listaObservable;
@@ -79,7 +81,7 @@ public class ControladorVistaTabla implements Initializable {
         this.tblProyectos.setItems(listaObservable);
 
         // Mostrar todos los proyectos en la tabla
-        accionMostrarTodo();
+        accionMostrarPorEstado(POJOProyecto.EN_PROCESO);
 
         // Rellenar el array de cadenas para el filtro (combo box)
         cadenasFiltro = new String[POJOProyecto.CADENAS_ESTADO.length + 1];
@@ -105,7 +107,7 @@ public class ControladorVistaTabla implements Initializable {
         ObservableList<String> listaFiltro = FXCollections.observableArrayList();
         listaFiltro.addAll(cadenasFiltro);
         cmbFiltro.setItems(listaFiltro);
-        cmbFiltro.setValue(cadenasFiltro[0]);
+        cmbFiltro.setValue(cadenasFiltro[1]);
     }
 
     private void ponerIconosBotones() {
@@ -113,6 +115,7 @@ public class ControladorVistaTabla implements Initializable {
         btnNuevo.setGraphic(new ImageView(new Image("recursos/alta.png")));
         btnEditar.setGraphic(new ImageView(new Image("recursos/modificar.png")));
         lblFiltro.setGraphic(new ImageView(new Image("recursos/filtro.png")));
+        btnAcerca.setGraphic(new ImageView(new Image("recursos/acerca.png")));
     }
 
     public void accionMostrarTodo() {
@@ -202,6 +205,11 @@ public class ControladorVistaTabla implements Initializable {
     }
 
     @FXML
+    private void clickAcerca(MouseEvent event) {
+        mostrarVentanaAcerca();
+    }
+
+    @FXML
     private void clickCmbFiltro(ActionEvent event) {
         accionMostrarSeleccionado();
     }
@@ -270,10 +278,37 @@ public class ControladorVistaTabla implements Initializable {
                 }
             });
 
+            // Mostrar
             escenario.showAndWait();
 
         } catch (IOException ex) {
             mostrarMensaje("Error", "Problema con la vista de edición", "No se ha podido cargar la vista edición.", true);
         }
     }
+
+    private void mostrarVentanaAcerca() {
+        try {
+            // Cargar el archivo de vista fxml
+            FXMLLoader cargadorFXML = new FXMLLoader(getClass().getResource("/vista/VistaAcerca.fxml"));
+            Parent root = cargadorFXML.load();
+            
+            Scene escena = new Scene(root);
+            Stage escenario = new Stage();
+            escenario.initModality(Modality.APPLICATION_MODAL);
+            escenario.setScene(escena);
+
+            // Poner un titulo a la ventana
+            escenario.setTitle("Acerca de");
+
+            // Ponerle un icono a la aplicacion
+            escenario.getIcons().add(new Image("recursos/acerca2.png"));
+            
+            // Mostrar
+            escenario.showAndWait();
+            
+        } catch (Exception ex) {
+            mostrarMensaje("Error", "Problema con la vista de edición", "No se ha podido cargar la vista acerca de." + ex.getMessage(), true);
+        }
+    }
+    
 }

@@ -82,6 +82,16 @@
                     </BorderPane.margin>
                 </Label>
             </left>
+         <right>
+            <JFXButton fx:id="btnAcerca" onMouseClicked="#clickAcerca" stylesheets="@../css/estiloBotones.css" textFill="#fb8c00" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets right="20.0" />
+               </BorderPane.margin>
+            </JFXButton>
+         </right>
         </BorderPane>
     </bottom>
 </BorderPane>

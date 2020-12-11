@@ -1,7 +1,6 @@
 package controlador;
 
 import javafx.application.Application;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -17,6 +16,10 @@ import javafx.stage.WindowEvent;
 public class Main extends Application {
 
     public static final String VERSION_APLICACION = "11.12.20";
+    public static final String NOMBRE_APLICACION = "Proyta";
+    public static final String NOMBRE_ARCHIVO = "bd_proyectos";
+    public static final String WEB_DONATIVO = "https://ko-fi.com/carlosaguirrev";
+    public static final String WEB_GITHUB = "https://github.com/CarlosAguirreV/ProytaFx.git";
 
     @Override
     public void start(Stage escenario) throws Exception {
@@ -35,7 +38,7 @@ public class Main extends Application {
             escenario.setScene(escena);
 
             // Poner un titulo a la ventana
-            escenario.setTitle("Proyta");
+            escenario.setTitle("Proyta Fx");
 
             // Ponerle un icono a la aplicacion
             escenario.getIcons().add(new Image("recursos/icono1.png"));
@@ -47,13 +50,10 @@ public class Main extends Application {
             escenario.setMaximized(true);
 
             // Lo que pasara al cerrar la ventana
-            escenario.setOnCloseRequest(new EventHandler<WindowEvent>() {
-                @Override
-                public void handle(WindowEvent event) {
-                    ControladorVistaTabla controlador = (ControladorVistaTabla) cargadorFXML.getController();
-                    controlador.accionCerrar();
-                    System.exit(0);
-                }
+            escenario.setOnCloseRequest((WindowEvent event) -> {
+                ControladorVistaTabla controlador = (ControladorVistaTabla) cargadorFXML.getController();
+                controlador.accionCerrar();
+                System.exit(0);
             });
 
             // Mostrarlo
