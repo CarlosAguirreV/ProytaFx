@@ -64,7 +64,7 @@
         </TableView>
     </center>
     <bottom>
-        <BorderPane prefHeight="59.0" prefWidth="1000.0" style="-fx-background-color: #263238;" BorderPane.alignment="CENTER">
+        <BorderPane prefHeight="59.0" style="-fx-background-color: #263238;" BorderPane.alignment="CENTER">
             <center>
                 <JFXComboBox fx:id="cmbFiltro" focusColor="#fb8c00" maxWidth="1.7976931348623157E308" minWidth="-Infinity" onAction="#clickCmbFiltro" stylesheets="@../css/estiloComboBox.css" unFocusColor="#5e5e5e" BorderPane.alignment="CENTER">
                     <BorderPane.margin>
