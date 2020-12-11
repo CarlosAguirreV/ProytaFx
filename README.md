@@ -37,3 +37,6 @@ Muchas gracias de antemano.
 
 ## 🎁 Agradecimientos
 * [IcoMoon por los iconos de la aplicación](https://icomoon.io/)
+* [A Taro L. por la librería JDBC](https://github.com/xerial/sqlite-jdbc)
+* [JFoenix por la librería de diseño](https://github.com/jfoenixadmin/JFoenix)
+
