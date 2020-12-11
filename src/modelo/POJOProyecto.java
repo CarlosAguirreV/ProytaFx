@@ -2,7 +2,7 @@ package modelo;
 
 /**
  * Clase POJO que contiene los campos de un proyecto.
- * 
+ *
  * @author Carlos Aguirre
  */
 public class POJOProyecto {

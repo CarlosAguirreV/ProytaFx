@@ -63,25 +63,25 @@
             </columns>
         </TableView>
     </center>
-   <bottom>
-      <BorderPane prefHeight="59.0" prefWidth="1000.0" style="-fx-background-color: #263238;" BorderPane.alignment="CENTER">
-         <center>
-            <JFXComboBox fx:id="cmbFiltro" focusColor="#fb8c00" maxWidth="1.7976931348623157E308" minWidth="-Infinity" onAction="#clickCmbFiltro" stylesheets="@../css/estiloComboBox.css" unFocusColor="#5e5e5e" BorderPane.alignment="CENTER">
-               <BorderPane.margin>
-                  <Insets left="20.0" right="20.0" />
-               </BorderPane.margin>
-            </JFXComboBox>
-         </center>
-         <left>
-            <Label fx:id="lblFiltro" alignment="CENTER" textFill="#fb8c00" BorderPane.alignment="CENTER">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-               <BorderPane.margin>
-                  <Insets left="20.0" />
-               </BorderPane.margin>
-            </Label>
-         </left>
-      </BorderPane>
-   </bottom>
+    <bottom>
+        <BorderPane prefHeight="59.0" prefWidth="1000.0" style="-fx-background-color: #263238;" BorderPane.alignment="CENTER">
+            <center>
+                <JFXComboBox fx:id="cmbFiltro" focusColor="#fb8c00" maxWidth="1.7976931348623157E308" minWidth="-Infinity" onAction="#clickCmbFiltro" stylesheets="@../css/estiloComboBox.css" unFocusColor="#5e5e5e" BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets left="20.0" right="20.0" />
+                    </BorderPane.margin>
+                </JFXComboBox>
+            </center>
+            <left>
+                <Label fx:id="lblFiltro" alignment="CENTER" textFill="#fb8c00" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <BorderPane.margin>
+                        <Insets left="20.0" />
+                    </BorderPane.margin>
+                </Label>
+            </left>
+        </BorderPane>
+    </bottom>
 </BorderPane>

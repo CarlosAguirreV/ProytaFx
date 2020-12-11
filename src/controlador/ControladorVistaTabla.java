@@ -56,7 +56,7 @@ public class ControladorVistaTabla implements Initializable {
     private TableColumn colPrioridad;
     @FXML
     private Label lblFiltro;
-    
+
     private ControlBD bd;
     private ObservableList<POJOProyecto> listaObservable;
     private String[] cadenasFiltro;
@@ -81,18 +81,16 @@ public class ControladorVistaTabla implements Initializable {
         // Mostrar todos los proyectos en la tabla
         accionMostrarTodo();
 
-        
         // Rellenar el array de cadenas para el filtro (combo box)
         cadenasFiltro = new String[POJOProyecto.CADENAS_ESTADO.length + 1];
         cadenasFiltro[0] = "Todo";
-        
+
         // Copiar los elementos que quedan al array
         System.arraycopy(POJOProyecto.CADENAS_ESTADO, 0, cadenasFiltro, 1, POJOProyecto.CADENAS_ESTADO.length);
 
         // Rellenar el combobox con los datos
         iniciarComboBox();
 
-        
         // Cambiar el texto por defecto al no haber datos en la tabla
         Label etiquetaNueva = new Label("No hay proyectos que mostrar");
         etiquetaNueva.setStyle("-fx-font-size: 30; -fx-text-fill: #424242; -fx-font-weight: bold;");

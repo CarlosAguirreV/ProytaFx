@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
 /**
+ * Clase principal, esta es la que inicia todo.
  *
  * @author Carlos Aguirre
  */
