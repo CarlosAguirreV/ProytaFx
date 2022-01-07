@@ -32,8 +32,6 @@ public class ControladorAcerca implements Initializable {
     @FXML
     private JFXButton btnCerrar;
     @FXML
-    private JFXButton btnDonativo;
-    @FXML
     private JFXButton btnGitHub;
     @FXML
     private Label lblSobre;
@@ -43,21 +41,18 @@ public class ControladorAcerca implements Initializable {
         
         // Poner iconos.
         btnCerrar.setGraphic(new ImageView(new Image("recursos/cancelar.png")));
-        btnDonativo.setGraphic(new ImageView(new Image("recursos/donar.png")));
         btnGitHub.setGraphic(new ImageView(new Image("recursos/github.png")));
         
         // Definir texto acerca de.
         lblSobre.setText(
-            "Título"
-            + "\n" + NOMBRE_APLICACION + " (Fx)"
+            NOMBRE_APLICACION + " (Fx)"
             + "\n\nDesarrollador"
             + "\nCarlos Aguirre"
             + "\n\nSobre esta aplicación"
             + "\nVersión: " + VERSION_APLICACION
             + "\nEste programa te permite gestionar tus proyectos e ideas de manera sencilla y ordenada."
-            + "\nPara almacenar la información se emplea una pequeña base de datos SQLite. La base de datos se almacena en el archivo " + NOMBRE_ARCHIVO + "."
-            + "\nSi te gusta el proyecto y quieres contribuir puedes hacer un pequeño donativo haciendo click en el botón Invitar a un cafe."
-            + "\nMuchas gracias por usar esta aplicación.");
+            + "\nPara almacenar la información se emplea una pequeña base de datos SQLite. La base de datos se almacena en el archivo " + NOMBRE_ARCHIVO + " en " + System.getProperty("user.dir") + " de su equipo."
+            + "\n\nMuchas gracias por usar esta aplicación.");
     }
 
     @FXML
@@ -65,15 +60,6 @@ public class ControladorAcerca implements Initializable {
         Node source = (Node) event.getSource();
         Stage stage = (Stage) source.getScene().getWindow();
         stage.close();
-    }
-
-    @FXML
-    private void clickDonativo(MouseEvent event) {
-        try {
-            Desktop.getDesktop().browse(new URI(WEB_DONATIVO));
-        } catch (Exception ex) {
-            mostrarLinkWeb("Donativo", WEB_DONATIVO);
-        }
     }
 
     @FXML

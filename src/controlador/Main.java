@@ -15,7 +15,7 @@ import javafx.stage.WindowEvent;
  */
 public class Main extends Application {
 
-    public static final String VERSION_APLICACION = "11.12.20";
+    public static final String VERSION_APLICACION = "07.01.22";
     public static final String NOMBRE_APLICACION = "Proyta";
     public static final String NOMBRE_ARCHIVO = "bd_proyectos";
     public static final String WEB_DONATIVO = "https://ko-fi.com/carlosaguirrev";
